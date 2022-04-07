@@ -22,12 +22,12 @@
     clear
     echo -ne "\033[1;32mNOME DO BOTÃO 2(PERSONALIZADO):\033[1;37m "
     read bt2
-    echo -ne "\033[1;32mLINK DO BOTÃO 2 (Ex: www.google.com): \033[1;37m "
+    echo -ne "\033[1;32mLINK DO BOTÃO 2:\033[1;37m "
     read link2
     clear
     echo -ne "\033[1;32mNOME DO BOTÃO 3(PERSONALIZADO):\033[1;37m "
     read bt3
-    echo -ne "\033[1;32mLINK DO BOTÃO 3 (Ex: www.google.com):\033[1;37m "
+    echo -ne "\033[1;32mLINK DO BOTÃO 3:\033[1;37m "
     read link3
     clear
     echo -ne "\033[1;32mDURAÇÃO DO TESTE(EM HORAS):\033[1;37m "
@@ -41,16 +41,16 @@
     chmod 777 botssh
     echo ""
     sleep 1
-    sed -i "s/BEM_VINDO/$bvindo/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/MSG_FINAL/$mfinal/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/BT_INF01/$bt1/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/INF02_BT/$bt2/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/LINK_BT02/$link2/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/BNT03_BT/$bt3/g" $HOME/BOT/botssh >/dev/null 2>&1
-    sed -i "s/LK_BT03/$link3/g" $HOME/BOT/botssh >/dev/null 2>&1
-        sed -i "s/TEMPO_TESTE/$dtempo/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#bvindo#!/$bvindo/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#mfinal#!/$mfinal/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#bt1#!/$bt1/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#bt2#!/$bt2/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#link2#!/$link2/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#bt3#!/$bt3/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#link3#!/$link3/g" $HOME/BOT/botssh >/dev/null 2>&1
+    sed -i "s/!#dtempo#!/$dtempo/g" $HOME/BOT/botssh >/dev/null 2>&1
     sleep 1
-    screen -dmS bot_teste ./botssh $token> /dev/null 2>&1
+    screen -dmS bot_teste ./botssh $token > /dev/null 2>&1
     clear
     echo "BOT ATIVADO"
     menu
